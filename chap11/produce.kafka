@@ -1,0 +1,34 @@
+PRODUCER non-keyed-json-message
+topic: in
+{
+    "id": "{{random.uuid}}",
+    "value": {{random.number(100)}},
+    "first_name": "{{name.firstName}}",
+    "last_name": "{{name.lastName}}",
+    "email": "{{internet.email}}",
+    "country": "{{address.country}}",
+    "animal": "{{animal.cow}}"
+}
+
+###
+
+PRODUCER non-keyed-json-message
+topic: in2
+{
+    "id": "{{random.uuid}}",
+    "value": {{random.number(100)}},
+    "first_name": "{{name.firstName}}",
+    "last_name": "{{name.lastName}}",
+    "email": "{{internet.email}}",
+    "country": "{{address.country}}",
+    "animal": "{{animal.cow}}"
+}
+
+###
+PRODUCER non-keyed-json-message
+topic: testing
+{
+    "id": "{{random.uuid}}",
+    "middle_name": "{{name.firstName}}",
+    "cow": "{{animal.cow}}"
+}
